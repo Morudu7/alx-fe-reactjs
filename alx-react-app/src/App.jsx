@@ -28,7 +28,7 @@ function App() {
   <div className="App">
     <UserProfile
     name="Alice"
-    age="26"
+    age="25"
     bio="Loves hiking and photography" />
   </div>
   </>
