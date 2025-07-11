@@ -2,6 +2,7 @@ import WelcomeMessage from './components/WelcomeMessage'
 import Header from './components/Header'
 import MainContent from './components/MainContent'
 import Footer from './components/Footer'
+import UserProfile from './components/UserProfile'
 import './App.css'
 
 function App() {
@@ -22,6 +23,13 @@ function App() {
 
   <div className="App">
     <Footer />
+  </div>
+
+  <div className="App">
+    <UserProfile
+    name="Alice"
+    age="26"
+    bio="Loves hiking and photography" />
   </div>
   </>
  );
