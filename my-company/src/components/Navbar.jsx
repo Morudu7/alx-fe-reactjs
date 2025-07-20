@@ -8,7 +8,7 @@ function Navbar() {
 
   const linkStyle = {
     display: 'flex',
-    justifycontent: 'flex-end',
+    justifyContent: 'flex-end',
     color: 'white',
     margin: '0 15px',
     textDecoration: 'none',
