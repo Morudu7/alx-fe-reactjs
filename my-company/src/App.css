@@ -1,0 +1,14 @@
+#root {
+  max-width: 1500px;
+  max-height: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#body {
+  background-image: url(./images/headphones_hero_1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
