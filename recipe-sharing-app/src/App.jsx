@@ -5,10 +5,11 @@ import RecipeList from './components/RecipeList';
 import RecipeDetails from './components/RecipeDetails';
 import AddRecipeForm from './components/AddRecipeForm';
 import EditRecipeForm from './components/EditRecipeForm';
+import SearchBar from './components/SearchBar'
 
 function App() {
   return (
-    <div className="bg-gray-50 min-h-screen font-sans">
+    <div style={{ textAlign: 'center'}}>
       <header className="bg-white shadow-md">
         <div className="container mx-auto px-4 py-6">
           <Link to="/">
