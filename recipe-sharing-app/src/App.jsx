@@ -5,7 +5,9 @@ import RecipeList from './components/RecipeList';
 import RecipeDetails from './components/RecipeDetails';
 import AddRecipeForm from './components/AddRecipeForm';
 import EditRecipeForm from './components/EditRecipeForm';
-import SearchBar from './components/SearchBar'
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
+import './App.css'
 
 function App() {
   return (
@@ -27,6 +29,10 @@ function App() {
           <Route path="/edit/:id" element={<EditRecipeForm />} />
         </Routes>
       </main>
+      <div>
+        <FavoritesList />
+        <RecommendationsList />
+      </div>
       <footer className="text-center py-4 mt-8 text-gray-500 text-sm">
         <p>Built with React, Zustand & React Router</p>
       </footer>

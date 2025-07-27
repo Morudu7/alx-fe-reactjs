@@ -5,19 +5,35 @@
  import { useRecipeStore } from './recipeStore';
 
   const RecipeList = () => {
-    const recipes = useRecipeStore(state => state.recipes);
-     const filteredRecipes = useRecipeStore(state => state.filteredRecipes);
+   const { recipes, favorites, addFavorite, removeFavorite } = useRecipeStore();
+   const filteredRecipes = useRecipeStore(state => state.filteredRecipes);
 
+  // Handler to toggle favorite status
+  const handleToggleFavorite = (recipeId) => {
+    if (favorites.includes(recipeId)) {
+      removeFavorite(recipeId);
+    } else {
+      addFavorite(recipeId);
+    }
+  };
+  
     return (
-    <div>
-      <SearchBar />
-      <ul>
-        {filteredRecipes.map(recipe => (
-          <RecipeDetails key={recipe.id} recipe={recipe} />
-        ))}
-      </ul>
+      <div className="recipe-list">
+      {recipes.map(recipe => (
+        <div key={recipe.id} className="recipe-item">
+          <h3>{recipe.title}</h3>
+          <p>{recipe.description}</p>
+          <p><strong>Ingredients:</strong> {recipe.ingredients.join(', ')}</p>
+          <button
+            onClick={() => handleToggleFavorite(recipe.id)}
+            className={favorites.includes(recipe.id) ? 'unfavorite-btn' : 'favorite-btn'}
+          >
+            {favorites.includes(recipe.id) ? 'Unfavorite' : 'Add to Favorites'}
+          </button>
+        </div>
+      ))}
     </div>
-    );
-  }
+  );
+};
 
-  export default RecipeList;
+export default RecipeList;
