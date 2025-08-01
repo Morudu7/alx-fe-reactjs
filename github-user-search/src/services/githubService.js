@@ -1,7 +1,7 @@
 // In src/services/githubService.js
 import axios from 'axios';
 
-const API_URL = 'https://api.github.com/search/users';
+const API_URL = 'https://api.github.com/search/users?q';
 
 export const searchUsers = async (params) => {
   // Destructure params with default values
