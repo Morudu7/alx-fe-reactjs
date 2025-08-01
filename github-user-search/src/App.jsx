@@ -3,7 +3,7 @@
 import React from 'react';
 import Search from './components/search';
 import './App.css'; // Optional: for basic styling
-import './App.css'
+import './index.css'
 
 function App() {
   return (
