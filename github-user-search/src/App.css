@@ -1,0 +1,14 @@
+#root {
+    text-align: center;
+    max-width: 1500px;
+    max-height: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#body {
+    background-image: url('./Git-images/image2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 5rem;
+} 

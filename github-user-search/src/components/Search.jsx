@@ -73,7 +73,7 @@ useEffect(() => {
           placeholder="Enter GitHub username"
           required
         />
-        <button type="submit">Search</button>
+        <button type="submit" style={{color: 'white', backgroundColor: 'red'}}>Search</button>
         </form>
 
         <form onSubmit={handleSearch} className="p-4 bg-gray-800 rounded-lg">

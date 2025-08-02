@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>GitHub User Search</h1>
+        <h1 style={{ fontSize: '100px', fontFamily: 'georgia', color: 'white'}}><a style={{color: 'green'}}>GitHub</a> User Search</h1>
       </header>
       <main>
         <Search />
