@@ -1,7 +1,7 @@
 
 // src/App.js
 import React from 'react';
-import Search from './components/search';
+import Search from './components/Search.jsx';
 import './App.css'; // Optional: for basic styling
 import './index.css'
 
