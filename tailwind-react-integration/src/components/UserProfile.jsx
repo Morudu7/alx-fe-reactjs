@@ -3,10 +3,10 @@ import React from "react";
 
 function UserProfile() {
   return (
-    <div className="bg-gray-100 p-8 max-w-sm-400 mx-auto my-20 rounded-lg shadow-lg">
-      <img src="https://via.placeholder.com/150" alt="User" class="rounded-full w-36 h-36 mx-auto" />
-      <h1 class="text-xl text-blue-800 my-4">John Doe</h1>
-      <p class="text-gray-600 text-base">Developer at Example Co. Loves to write code and explore new technologies.</p>
+    <div className="bg-gray-100 p-8 max-w-sm-400 mx-auto my-20 rounded-lg shadow-lg sm:p-4 md:p-8 sm:max-w-xs md:max-w-sm">
+      <img src="https://via.placeholder.com/150" alt="User" class="rounded-full w-36 h-36 mx-auto sm:w-24 sm:h-24 md:w36 md:h36" />
+      <h1 class="text-xl text-blue-800 my-4 sm:text-lg md:text-xl">John Doe</h1>
+      <p class="text-gray-600 text-base sm:text-sm md:text-base" >Developer at Example Co. Loves to write code and explore new technologies.</p>
     </div>
   );
 }
