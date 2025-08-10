@@ -13,8 +13,8 @@ export const searchUsers = async (params) => {
   if (location) queryParts.push(`location:${location}`);
   if (minRepos) queryParts.push(`repos:>=${minRepos}`);
 
+
   // Join parts to create the final query string
-  const queryString = queryParts.join('+');
 
   if (!queryString) {
     // Return empty if no search terms are provided
@@ -32,6 +32,26 @@ export const searchUsers = async (params) => {
     return response.data; // { items: [...], total_count: ... }
   } catch (error) {
     console.error('Error fetching from GitHub API:', error);
+    throw error;
+  }
+};
+
+/**
+ * Fetches data for a single GitHub user.
+ * @param {string} username - The GitHub username to fetch data for.
+ * @returns {Promise<object>} The user data object.
+ */
+export const fetchUserData = async (username) => {
+  if (!username) {
+    // Handle the case where username is not provided
+    throw new Error('Username is required');
+  }
+
+  try {
+    const response = await axios.get(`${GITHUB_API_URL}/users/${username}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Error fetching data for user ${username}:`, error);
     throw error;
   }
 };
