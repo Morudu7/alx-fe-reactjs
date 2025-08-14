@@ -3,18 +3,51 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/150",
+     "ingredients": [ 
+      "200g spaghetti",
+      "100g pancetta or guanciale, diced",
+      "2 large eggs",
+      "50g Pecorino Romano cheese, grated",
+      "50g Parmesan cheese, grated",
+      "Freshly ground black pepper",
+      "Salt to taste"
+  ],
+    "instructions": [
+      "Cook the spaghetti in a large pot of salted boiling water until al dente.",
+      "While the pasta is cooking, fry the pancetta in a pan over medium heat until crisp. Remove from heat.",
+      "In a separate bowl, whisk the eggs, cheeses, and a generous amount of black pepper.",
+      "Drain the pasta, reserving a cup of the pasta water. Quickly add the hot pasta to the pan with the pancetta and toss.",
+      "Remove the pan from the heat and pour in the egg and cheese mixture, stirring quickly to create a creamy sauce. Add a splash of pasta water if it's too thick.",
+      "Serve immediately with an extra sprinkle of cheese and black pepper."
+    ]
   },
+
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/150"
-  },
-  {
-    "id": 3,
-    "title": "Vegetable Stir-Fry",
-    "summary": "A quick and healthy mix of fresh vegetables stir-fried in a savory soy-ginger sauce.",
-    "image": "https://images.unsplash.com/photo-1607584106294-934a5ba7a288?q=80&w=2070&auto=format&fit=crop"
+    "image": "https://via.placeholder.com/150",
+     "ingredients": [
+      "500g boneless chicken, cubed",
+      "1 cup plain yogurt",
+      "1 tbsp ginger-garlic paste",
+      "1 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tbsp oil",
+      "1 large onion, finely chopped",
+      "2 tomatoes, pureed",
+      "1/2 cup heavy cream",
+      "1 tsp garam masala"
+    ],
+    "instructions": [
+      "Marinate the chicken in yogurt, ginger-garlic paste, turmeric, and chili powder for at least 1 hour.",
+      "Grill or pan-fry the chicken until cooked through. Set aside.",
+      "In a large pan, heat oil and sauté the onions until golden brown.",
+      "Add the tomato puree and cook until the oil separates from the masala.",
+      "Stir in the heavy cream and garam masala. Simmer for 5 minutes.",
+      "Add the cooked chicken to the gravy and cook for another 5-10 minutes.",
+      "Serve hot with naan or rice."
+    ]
   }
 ]
