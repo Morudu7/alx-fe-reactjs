@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import Homepage from './components/Homepage'
+import HomePage from './components/HomePage'
 import './index.css'
 
 function App() {
   return (
       <div>
-        <Homepage />
+        <HomePage />
       </div>
   );
 }
