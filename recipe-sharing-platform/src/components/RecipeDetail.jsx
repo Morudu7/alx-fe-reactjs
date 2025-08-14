@@ -1,14 +1,44 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useState,useEffect } from "react";
 import recipesData from '../data.json';
 
 const RecipeDetail = () => {
   // Get the 'id' from the URL parameters
   const { id } = useParams();
-  
-  // Find the recipe with the matching id. 
-  // Note: useParams returns a string, so we convert it to a number for comparison.
-  const recipe = recipesData.find(r => r.id === parseInt(id));
+
+  // State to hold the recipe and loading status
+  const [recipe, setRecipe] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  // useEffect to fetch recipe details when the component mounts or id changes
+  useEffect(() => {
+    // Set loading to true when starting to "fetch"
+    setLoading(true);
+
+    // Find the recipe with the matching id from our JSON data
+    // The parseInt() is important because the id from useParams is a string
+    const foundRecipe = recipesData.find(r => r.id === parseInt(id));
+    
+    // Simulate a network delay (e.g., 500ms) for a better user experience
+    const timer = setTimeout(() => {
+      setRecipe(foundRecipe);
+      setLoading(false);
+    }, 500);
+
+    // Cleanup function to clear the timer if the component unmounts
+    return () => clearTimeout(timer);
+
+  }, [id]); // The effect depends on the 'id' from the URL
+
+  // Display a loading message while fetching data
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <h1 className="text-2xl font-semibold text-gray-700">Loading recipe...</h1>
+      </div>
+    );
+  }
 
   // If no recipe is found, display a message
   if (!recipe) {
