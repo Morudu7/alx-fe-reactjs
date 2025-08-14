@@ -11,7 +11,7 @@ useEffect (() => {
          <div className="bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">
-          HALOfood Recipes
+          <a className="text-green-600">HALO</a>food Recipes
         </h1>
 
         {/* Responsive Grid for Recipe Cards */}
