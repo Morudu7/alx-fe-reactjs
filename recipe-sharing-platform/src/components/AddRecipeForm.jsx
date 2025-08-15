@@ -15,7 +15,7 @@ const AddRecipeForm = () => {
   // A single handler for all input changes
   const handleChange = (e) => {
     const { name } = e.target;
-    const { value } = e.target;
+    const { value } = [target.value]
     setFormData(prevState => ({
       ...prevState,
       [name]: value,
