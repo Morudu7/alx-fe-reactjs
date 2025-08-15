@@ -1,13 +1,9 @@
-import pieImg from './RecipeImagesDemo/pie.jpg';
-import taccoImg from './RecipeImagesDemo/tacco.jpg';
-
-
-const recipesData = [
+[
   {
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": pieImg,
+    "image": "https://via.placeholder.com/150",
      "ingredients": [ 
       "200g spaghetti",
       "100g pancetta or guanciale, diced",
@@ -31,7 +27,7 @@ const recipesData = [
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": taccoImg,
+    "image": "https://via.placeholder.com/150",
      "ingredients": [
       "500g boneless chicken, cubed",
       "1 cup plain yogurt",
@@ -55,5 +51,3 @@ const recipesData = [
     ]
   }
 ]
-
-export default recipesData;
