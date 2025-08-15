@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import recipesData from '../data.json'
+import recipesData from '../data'
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
