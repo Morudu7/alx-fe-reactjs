@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useState,useEffect } from "react";
-import recipesData from '../data';
+import recipesData from '../data.json';
 
 const RecipeDetail = () => {
   // Get the 'id' from the URL parameters
