@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
 const RegistrationForm = () => {
-    const [formData, setFormData] = useState({ name: '', email: '', password: '' });
+    const [name, setName] = useState({ name: ''});
+    const [email, setEmail] = useState({email: ''});
+    const [password, setpassword] = useState({passwoed: ''});
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -10,30 +12,40 @@ const RegistrationForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+        console.log(name, email, password);
     };
 
     return (
         <form onSubmit={handleSubmit}>
+            <div>
+            <label>Name</label>
             <input
                 type="text"
                 name="name"
-                value={formData.name}
+                value={name}
                 onChange={handleChange}
             />
+            </div>
+
+            <div>
+            <label>Email</label>
             <input
                 type="email"
                 name="email"
-                value={formData.email}
+                value={email}
                 onChange={handleChange}
             />
-
+            </div>
+            
+            <div>
+            <labe>Password</labe>
             <input
             type="password"
             name="password"
-            value={formData.password}
+            value={password}
             onChange={handleChange}
             />
+            </div>
             <button type="submit">Submit</button>
         </form>
     );
