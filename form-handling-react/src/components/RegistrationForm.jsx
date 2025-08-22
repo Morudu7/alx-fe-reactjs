@@ -4,11 +4,23 @@ const RegistrationForm = () => {
     const [username, setuserName] = useState({ name: ''});
     const [email, setEmail] = useState({email: ''});
     const [password, setpassword] = useState({passwoed: ''});
+     const [errors, setErrors] = useState({});
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({ ...prevState, [name]: value }));
     };
+
+     // Basic validation logic
+  const validate = () => {
+    let tempErrors = {};
+    if (!username) tempErrors.username = 'Username is required.';
+    if (!email) tempErrors.email = 'Email is required.';
+    if (!password) tempErrors.password = 'Password is required.';
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
+  };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,6 +37,7 @@ const RegistrationForm = () => {
                 value={username}
                 onChange={handleChange}
             />
+             {errors.username && <p className="error">{errors.username}</p>}
             </div>
 
             <div>
@@ -35,6 +48,7 @@ const RegistrationForm = () => {
                 value={email}
                 onChange={handleChange}
             />
+             {errors.email && <p className="error">{errors.email}</p>}
             </div>
             
             <div>
@@ -45,6 +59,7 @@ const RegistrationForm = () => {
             value={password}
             onChange={handleChange}
             />
+             {errors.password && <p className="error">{errors.password}</p>}
             </div>
             <button type="submit">Submit</button>
         </form>
