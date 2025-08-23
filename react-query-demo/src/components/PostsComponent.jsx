@@ -10,7 +10,7 @@ export const fetchData = async () => {
   return response.json();
 };
 
-const PostComponent = () => {
+const PostsComponent = () => {
     // Use the useQuery hook to handle data fetching and caching
     const { data, error, isLoading, refetch, isFetching } =  useQuery({
     queryKey: ['post'],
@@ -47,4 +47,4 @@ const PostComponent = () => {
     )
 }
 
-export default PostComponent;
+export default PostsComponent;

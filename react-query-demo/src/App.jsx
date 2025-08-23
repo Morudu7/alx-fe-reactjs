@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Header from './components/Header';
-import PostComponent from './components/PostComponent'
+import PostsComponent from './components/PostsComponent'
 import './App.css'
 
 const queryClient = new QueryClient();
@@ -9,7 +9,7 @@ function App() {
   return (
       <QueryClientProvider client={queryClient}>
         <Header />
-        <PostComponent />
+        <PostsComponent />
       </QueryClientProvider>
   )
 }
