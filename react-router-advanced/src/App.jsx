@@ -15,7 +15,7 @@ function App() {
        <Router>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/Profile">Profile</Link>
+        <Link to="/profile">Profile</Link>
         <Link to="/blog">Blog</Link>
       </nav>
 
