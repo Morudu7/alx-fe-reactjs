@@ -1,9 +1,10 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-
-const isAuthenticated = false; // Simulate authentication status
+import { useAuth } from './useAuth'; // Adjust the import path as necessary
 
 const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated } = useAuth();
+
   return isAuthenticated ? children : <Navigate to="/" />;
 };
 

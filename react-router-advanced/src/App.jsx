@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { AuthProvider } from './components/useAuth'; // Adjust the import path as necessary
 import Profile from './components/Profile';
 import ProtectedRoute from './components/ProtectedRoute';
 import BlogPost from './components/Blog';
@@ -10,10 +11,11 @@ function App() {
 
   return (
     <div>
+      <AuthProvider>
        <Router>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/profile">Profile</Link>
+        <Link to="/Profile">Profile</Link>
         <Link to="/blog">Blog</Link>
       </nav>
 
@@ -23,6 +25,7 @@ function App() {
         <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
     </Router>
+    </AuthProvider>
     </div>
   )
 }
