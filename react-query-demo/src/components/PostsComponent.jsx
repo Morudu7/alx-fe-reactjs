@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import ErrorMessage from './ErrorMessage';
 import PostCard from './PostCard';
 
-export const fetchData = async () => {
+export const fetchPosts = async () => {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
   if (!response.ok) {
     throw new Error('Network response was not ok');
@@ -12,9 +12,9 @@ export const fetchData = async () => {
 
 const PostsComponent = () => {
     // Use the useQuery hook to handle data fetching and caching
-    const { data, error, isLoading, refetch, isFetching } =  useQuery({
+    const { data, isError, error, isLoading, refetch, isFetching } =  useQuery({
     queryKey: ['post'],
-    queryFn: fetchData
+    queryFn: fetchPosts
   });
 
 
@@ -35,7 +35,7 @@ const PostsComponent = () => {
         </button>
       </div>
 
-      {error && <ErrorMessage message={error.message} />}
+      {isError && <ErrorMessage message={error.message} />}
       {data && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {data.map((post) => (
