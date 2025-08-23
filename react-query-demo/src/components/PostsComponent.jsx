@@ -14,7 +14,12 @@ const PostsComponent = () => {
     // Use the useQuery hook to handle data fetching and caching
     const { data, isError, error, isLoading, refetch, isFetching } =  useQuery({
     queryKey: ['post'],
-    queryFn: fetchPosts
+    queryFn: fetchPosts,
+    // Configurations for caching and refetching
+    cacheTime: 1000 * 60 * 5, // Cache the data for 5 minutes
+    staleTime: 1000 * 60, // Data will be considered fresh for 1 minute
+    refetchOnWindowFocus: true, // Refetch the data when the window is focused
+    keepPreviousData: true // Keep the previous data while new data is being fetched
   });
 
 
