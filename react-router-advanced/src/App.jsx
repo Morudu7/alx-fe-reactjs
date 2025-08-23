@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="profile/" element={ <ProtectedRoute> <Profile /> </ProtectedRoute> } />
-        <Route path=":postId" element={<BlogPost />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
     </Router>
     </div>
